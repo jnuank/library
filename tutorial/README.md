@@ -10,6 +10,15 @@ CCSR手法での変更容易性を実感して頂くためのチュートリア�
 - 変更の対象個所をどう見つけるかを体験する
 - 変更の影響があちこちには波及しないことを体験する
 
+## チュートリアルでの学習に必要なもの
+- JDK 11
+- Gradle 5.0+
+- IDE
+   - 例：[IntelliJ](https://www.jetbrains.com/ja-jp/idea/)
+- [Graphviz](https://www.graphviz.org/)
+   - JIGドキュメントの生成に必要です
+   
+
 
 # 全体の構成
 
@@ -25,17 +34,40 @@ CCSR手法での変更容易性を実感して頂くためのチュートリア�
 [トップへ戻る](#仕様変更チュートリアル)
 
 ## アプリを起動する
+
+- GitHubリポジトリから、サンプルコードをCloneする
+
+```shell script
+git clone git@github.com:system-sekkei/library.git
+cd library
+```
+
 - Gradleタスク bootRunを実行する
 
 ```shell script
 gradle bootRun
 ```
 
-- localhost:8080 にブラウザでアクセスする。
+<details>
+<summary>エラーが出た時</summary>
 
-- メニューが出てくればOKです。
+以下のようなエラーが出ているときは、使用しているJDKのVersionが合っていない可能性があります。
+
+```shell script
+> startup failed:
+  General error during semantic analysis: Unsupported class file major version 57```
+```
+
+</details>
+
+
+- localhost:8080 にブラウザでアクセスする。
+    - 以下のようなメニューが出てくればOKです。
 
 ![image](https://user-images.githubusercontent.com/33717710/84584738-f766b780-ae42-11ea-978e-41c6c64091f9.png)
+
+
+
 
 ## JIGドキュメントを出力する
 
